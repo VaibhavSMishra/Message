@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surprise for Friend 💌</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Nunito', sans-serif;
+      color: #ff4081;
+      text-align: center;
+      padding: 30px;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ff4081;
+      font-weight: bold;
+    }
+    #hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #hidden-message {
+      display: none;
+      margin-top: 20px;
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      color: #ff4081;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <header>
+    <h1>Surprise Time 🎉</h1>
+    <nav>
+     <a href="index.html">About You</a>
+      <a href="poem.html">Poem</a>
+      <a href="gallery.html">Gallery</a>
+     <!-- <a href="about-her.html">About You</a>-->
+      <a href="game.html">Mini Game</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Click the button to reveal a secret 💖</h2>
+    <button class="btn" onclick="revealMessage()">Reveal 💌</button>
+    <div id="hidden-message">
+      Hi Garima,<br>
+      Hope you'll respect my feelings and praise my efforts as my words are not enough to explain my emotions.<br>
+      This is message from my heart, and it is not for proposal
+      as i think proposal makes the simple friendship toxic and it all depends on you.<br>
+      If any word makes you uncomfortable i extremly sorry for that.<br>
+      As you already know some life incidents had changed my life completly and i don't want to repeat otherwise you will say everytime i am stuck and 
+      crying for the same 😅 as the person who is very close to my heart where i express my all feelings is no more thats why i am stuck over there
+      and i don't know why form the very first day when you talk with me my heart felt too calm as the way talk with me and 
+      i started missing you whenever you are free we will talk as it makes me calm, i don't want to disturb you so that i never make a call form my side so I wanna say that
+      whenever you have free time please call me.🥺<br>
+      I know many boys approches girls for friendship and you can't trust each and everyone
+      and I know may be i'm not your type but trust me i will be the best person you ever met in your life.<br>
+      I am introvert and orthodox type so i am unable to say those magical 3 magical words so easily to everyone
+      until an unless we have mutual confidence between us and i am not as others boys genz type who just met and say i take time to build trust
+      and i follow traditional values either good or bad stay forever in any conditions.<br>
+      I am not like others who show off there parents wealth as i think what you have done is yours if you take my opinion never trust on those person\
+      always go with that person who respect  and care for you i am not talking for my self any person in your Life whome you trust, always go with self made man as he know how to survive and not get panic in crucial situtions, as i have seen too when you are in need 
+      of someone for just moral support no one 
+      stand beside you and you have to find the true person as in starting everyone will say i will i will but the end no is there for you.<br>
+      I hope you also not like  others girls who just play with feelings, <br> 
+      You also think that "Do Shabd pyar se kya karlo piche hi pad jate hain" 😅 (but mai piche padunga jab tak tum bhaga na do) jokesapart
+      its true i like your behaviour and the way you talk , accent and your laugh and i know with respect to time you lose interest in me but mai nahi i have same 
+      feeling and respect for life time.<br>
+      You wanna know that whether i am sure or not i am sure by my side and hopes from your end too<br>
+      I don't force you to go with me i just want to express that if you are with me,<br>
+      I know i am not as others are but if you trust on me i'll provide you each and everything as possible by me.<br>
+      I just want someone whome i share my feelings and respect i'm not like others those having cunning motives may be my words can't explain my feelings good.
+      I thinks you understand me little that how i am i just say you can trust and atleast give one chance.<br>
+      
+      I am not forcing you to meet me i just want to introduce myself in better way so that you
+      better understand me, if you are not intrested we just talking like that if you want.hope you will give me chance too as early as possible. 🥺<br>
+       may be i am not as per you but if you give me chance i'll be.<br>
+      these all words are just my feelings don't take it otherwise i don't know how to express my feeling yeah i am intrested in you
+      but trust me i am not like othrs who cheat and make use of others, there are too many things to express leave it fir kabhi.
+    </div>
+  </main>
+
+  <script>
+    function revealMessage() {
+      document.getElementById('hidden-message').style.display = 'block';
+    }
+
+    // Heart rain animation
+    (function heartRain(){
+      const container = document.getElementById('hearts');
+      const colors = ['#ff6b9a','#ff9bbb','#ffb3cc','#ffd6e7'];
+      const heartChar = '❤';
+
+      function spawnHeart(){
+        const h = document.createElement('div');
+        h.textContent = heartChar;
+        h.style.position='absolute';
+        h.style.left = Math.random()*100 + 'vw';
+        h.style.top = '-40px';
+        h.style.fontSize = (12 + Math.random()*28) + 'px';
+        h.style.color = colors[Math.floor(Math.random()*colors.length)];
+        h.style.opacity = (0.6 + Math.random()*0.4).toFixed(2);
+        h.style.filter = 'drop-shadow(0 4px 6px rgba(255,107,154,.25))';
+        const fall = 8 + Math.random()*10;
+        const drift = (Math.random() < .5 ? -1 : 1) * (10 + Math.random()*30);
+        h.animate([
+          { transform: 'translate(0,-60px) rotate(0deg)' },
+          { transform: `translate(${drift}px, 100vh) rotate(${Math.random()*120-60}deg)` }
+        ], { duration: fall*1000, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+
+        container.appendChild(h);
+        setTimeout(()=> container.removeChild(h), fall*1000 + 200);
+      }
+
+      setInterval(spawnHeart, 300);
+      for(let i=0;i<20;i++) setTimeout(spawnHeart, i*120);
+    })();
+  </script>
+</body>
+</html>
